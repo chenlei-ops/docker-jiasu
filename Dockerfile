@@ -1,9 +1,10 @@
 FROM alpine:latest
 
-MAINTAINER 烂泥行天下 <ilanni@ilanni.com>
+MAINTAINER lei.chen
 RUN rm -rf /var/cache/apk/* && \
     rm -rf /tmp/*
 RUN apk update
+RUN apk –no-cache add wget
 
 #下载k8s
 
