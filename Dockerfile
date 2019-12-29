@@ -1,7 +1,9 @@
 FROM alpine:latest
 
 MAINTAINER 烂泥行天下 <ilanni@ilanni.com>
-
+RUN rm -rf /var/cache/apk/* && \
+    rm -rf /tmp/*
+RUN apk update
 RUN apk –no-cache add wget curl
 
 #下载nexus3
