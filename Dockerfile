@@ -29,7 +29,7 @@ ENV JFROG_DOWNLOAD_URL=https://bintray.com/jfrog/artifactory/download_file?file_
 
 RUN wget ${JFROG_DOWNLOAD_URL} -O jfrog-artifactory-${JFROG_VERSION}.zip
 
-#下载es
+#下载es1
 
 ENV ES_VERSION=6.5.2
 
