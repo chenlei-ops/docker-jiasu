@@ -5,34 +5,8 @@ RUN rm -rf /var/cache/apk/* && \
     rm -rf /tmp/*
 RUN apk update
 
-#下载nexus3
+#下载k8s
 
-ENV NEXUS_VERSION_3=3.19.1-01
-
-ENV NEXUS_DOWNLOAD_URL_3=https://download.sonatype.com/nexus/3/nexus-${NEXUS_VERSION_3}-unix.tar.gz
-
-RUN wget ${NEXUS_DOWNLOAD_URL_3}
-
-#下载nexus2
-
-ENV NEXUS_VERSION_2=2.14.15-01
-
-ENV NEXUS_DOWNLOAD_URL_2=https://download.sonatype.com/nexus/oss/nexus-${NEXUS_VERSION_2}-bundle.tar.gz
-
-RUN wget ${NEXUS_DOWNLOAD_URL_2}
-
-#下载jfrog1
-
-ENV JFROG_VERSION=6.16.0
-
-ENV JFROG_DOWNLOAD_URL=https://bintray.com/jfrog/artifactory/download_file?file_path=jfrog-artifactory-oss-${JFROG_VERSION}.zip
-
-RUN wget ${JFROG_DOWNLOAD_URL} -O jfrog-artifactory-${JFROG_VERSION}.zip
-
-#下载es1
-
-ENV ES_VERSION=6.5.2
-
-ENV ES_DOWNLOAD_URL=https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz
-
-RUN wget ${ES_DOWNLOAD_URL}
+ENV K8S_VERSION=v1.16.4
+ENV K8S_VERSION_URL=https://dl.k8s.io/{K8S_VERSION}/kubernetes-server-linux-amd64.tar.gz
+RUN wget ${K8S_VERSION_URL}
