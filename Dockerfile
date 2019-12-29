@@ -21,7 +21,7 @@ ENV NEXUS_DOWNLOAD_URL_2=https://download.sonatype.com/nexus/oss/nexus-${NEXUS_V
 
 RUN wget ${NEXUS_DOWNLOAD_URL_2}
 
-#下载jfrog
+#下载jfrog1
 
 ENV JFROG_VERSION=6.16.0
 
